@@ -49,25 +49,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'login';
+$route['default_controller'] = 'projektLogin';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['loginProjekt'] = 'projektLogin/login';
+$route['loginFinish'] = 'projektLogin/loginFinish';
+$route['registerProjekt'] = 'projektRegister/register';
+$route['registerProjektFinish'] = 'projektRegister/registerFinish';
 
-
-
-$route['login'] = 'Login/login';
-$route['login-finish'] = 'Login/loginFinish';
-$route['register1'] = 'Login/register1';
-$route['register-finish1'] = 'Login/registerFinish1';
-$route['register2'] = 'Login/register2';
-$route['register-finish2'] = 'Login/registerFinish2';
-$route['register3'] = 'Login/register3';
-$route['register-finish3'] = 'Login/registerFinish3';
-
-$route['admin/dashboard'] = 'Dashboard/dashboard';
-$route['admin/logout'] = 'Dashboard/logout';
-$route['admin/users'] = 'Users/index';
-$route['admin/categories'] = 'Categories/index';
-$route['admin/articles'] = 'Articles/index';
-
+$route['admin/dashboard'] = 'backendProjekt/dashboard';
+$route['admin/logout'] = 'backendProjekt/logout';
