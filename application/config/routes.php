@@ -58,5 +58,14 @@ $route['loginFinish'] = 'projektLogin/loginFinish';
 $route['registerProjekt'] = 'projektRegister/register';
 $route['registerProjektFinish'] = 'projektRegister/registerFinish';
 
+
+$route['articles'] = 'projektLogin/getArticles';
+
 $route['admin/dashboard'] = 'backendProjekt/dashboard';
+$route['admin/table'] = 'backendProjekt/table';
+$route['admin/edit'] = 'backendProjekt/edit';
+$route['admin/delete'] = 'backendProjekt/delete';
 $route['admin/logout'] = 'backendProjekt/logout';
+$route['admin/upload'] = 'backendProjekt/uploadView';
+$route['admin/uploadSucces'] = 'backendProjekt/do_upload';
+

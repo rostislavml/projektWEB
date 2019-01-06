@@ -17,6 +17,7 @@ class projektLogin extends CI_Controller {
         parent::__construct();
         $this->load->library('validation_pomocne');
         $this->load->library('objectclass');
+        $this->load->model('Articles_model');
     }
     
     //Úvodní stránka
@@ -47,5 +48,13 @@ class projektLogin extends CI_Controller {
             $this->session->set_flashdata('message', 'Your e-mail or your password is wrong');
             redirect('loginProjekt');
         }
+    }
+
+    //articles frontend
+    public function getArticles(){
+        $data['title'] = "články";
+        $data['main'] = "frontendProjekt/Articles";
+        $data['articles'] = $this->Articles_model->getArticles();
+        $this->layout->generate($data);
     }
 }
